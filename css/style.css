@@ -5,3 +5,63 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    width: 1440px;
+    height: 1024px;
+}
+main{
+    width: 100%;
+    height: 100%;
+    padding: 3rem;
+
+    background: white;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "titulo titulo titulo titulo titulo texto texto texto texto"
+    "img img img img img img img img img "
+    "img img img img img img img img img "
+    ;
+    gap: 5px;
+}
+main div{
+    display: flex;
+}
+.elem1{
+    /* background: gray; */
+    grid-area: titulo;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    font-size: 3rem;
+}
+/* Hya que desplazar el elemento un par de px hacia arriba */
+.elem2{
+    /* background: gray; */
+    grid-area: texto;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.elem3{
+    /* background: gray; */
+    grid-area: img;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.boton{
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #252525;
+    border-radius: 16px;
+}
